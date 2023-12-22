@@ -3,4 +3,7 @@ window.addEventListener("load", ()=>{
     document.getElementById("logo").addEventListener("click", ()=>{
         location.href="http://127.0.0.1:5500/index.html"
     })
+    document.getElementById("titulo").addEventListener("click", ()=>{
+        location.href="http://127.0.0.1:5500/index.html"
+    })
 })

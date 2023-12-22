@@ -12,6 +12,9 @@ header{
     margin: 10px 30px;
     margin-bottom: 30px;
 }
+.imagen{
+    width: 30%;
+}
 hr{
     margin-bottom: 50px;
 }
@@ -19,6 +22,17 @@ header img{
     border-radius: 8px;
     cursor: pointer;
 }
+header h1 {
+    flex-grow: 1; 
+    text-align: center; 
+    cursor: pointer;
+    margin: 0;
+}
+header nav {
+    width: 30%;
+    margin-left: auto; 
+}
+
 header ul{
     list-style: none;
     display: flex;
