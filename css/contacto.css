@@ -13,7 +13,7 @@ header{
     margin-bottom: 30px;
 }
 hr{
-    margin-bottom: 70px;
+    margin-bottom: 50px;
 }
 header img{
     border-radius: 8px;
@@ -63,6 +63,10 @@ main{
     justify-content: space-between;
 
 }
+h1{
+    margin-left: 10%;
+    margin-bottom: 20px;
+}
 form{
     height: auto;
     background-color: rgba(255, 255, 255, 0.811);
@@ -83,8 +87,10 @@ form label input{
     background-color: rgba(255, 255, 255, 0.475);
     width: 100%;
     font-size: 18px;
-    border-radius: 8px;
+    border-radius: 5px;
     padding: 0 8px;
+    transition: all 0.8s ease;
+
 }
 textarea{
     background-color: rgba(255, 255, 255, 0.475);
@@ -92,7 +98,14 @@ textarea{
     width: 91%;
     border-radius: 8px;
     padding: 8px;
+    transition: all 0.8s ease;
 
+}
+input:focus{
+    background-color: rgba(255, 255, 255, 0.756);
+}
+textarea:focus{
+    background-color: rgba(255, 255, 255, 0.756);
 }
 .formulario{
     background-image: url("../img/fondo.jpg");
@@ -123,9 +136,20 @@ textarea{
     margin: 30px 0px;
 
 }
+.horario li{
+    margin-bottom: 10px;
+}
+.textoHorario{
+    margin-bottom: 10px;
+}
+
 
 .contenedor-formulario article{
     border: 1px solid rgb(187, 187, 187);
     padding: 20px 30px;
     border-radius: 8px;
+    transition: all 0.7s ease;
+}
+.contenedor-formulario article:hover{
+    box-shadow: 0px 1px 21px -2px rgb(124, 124, 124);
 }
