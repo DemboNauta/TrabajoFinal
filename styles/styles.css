@@ -1,0 +1,240 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    padding-top: 5px;
+    text-align: center;
+    width: 800px;
+    font-family: bebasnue;
+    margin: auto;
+}
+
+nav {
+    height: 60px;
+}
+
+nav ul a {
+    display: block;
+    color: black;
+    text-decoration: none;
+}
+
+nav li {
+    position: relative;
+    display: inline-block;
+    padding: 15px;
+    position: relative;
+    width: 120px;
+    font-size: 16px;
+    border-right: 1px solid black;
+    font-family: sans-serif;
+}
+
+nav li:hover {
+    background-color: #e3dbdb;
+}
+
+#carrito {
+    background-color: #df3030;
+    border-radius: 5px;
+    color: white;
+    border-right: 0px;
+    margin-left: 30px;
+    transition: all 0.4 ease;
+}
+
+#carrito:hover {
+    background-color: #b02727;
+}
+
+#carrito a {
+    color: white;
+}
+
+#imagenOfertas {
+    margin-top: 100px;
+}
+
+.imagenesEjemplos {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.imagenesEjemplos img {
+    padding: 50px;
+    transition: all 0.4s ease;
+    
+}
+.fotos{
+    border-radius: 6px;
+}
+.imagenesEjemplos img:hover {
+    width: 220px;
+    height: 190px;
+}
+
+footer{
+    width: 100%;
+    height: 70px;
+    background-color: #df3030;
+    position: relative;
+    bottom: 0;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    font-family: sans-serif;
+}
+
+#huella {
+    width: 180px;
+    text-align: center;
+    background-color: #df3030;
+    color: white;
+    border: 1px solid #be2929;
+    border-radius: 8px;
+    padding: 5px;
+    margin-left: 10%;
+    transition: all 0.4s linear;
+}
+#huella:hover{
+    width: 200px;
+    background-color: #ce2b2b;
+    border: 2px solid #be2929;
+
+
+
+
+}
+
+#huella a:link {
+    color: white;
+    text-decoration: none;
+}
+
+#huella a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+.material-symbols-outlined {
+    color: white;
+}
+
+#menu,
+#menu-check {
+    display: none;
+    width: 33px;
+}
+
+@media (max-device-width: 810px) {
+    nav {
+        position: absolute;
+        left: 0;
+        width: 30%;
+        display: none;
+        z-index: 1;
+    }
+
+    nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        
+    }
+
+    nav ul li {
+        display: block;
+        padding: 15px;
+        text-align: center;
+        width: 100%;
+        border: none;
+        backdrop-filter: blur(7px);
+        background-color: rgba(109, 109, 109, 0.38);
+    }
+
+    #carrito {
+        margin-left: 0;
+        border-radius: 0;
+        backdrop-filter: blur(10px);
+        background-color: #df3030b9;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+    }
+    
+
+    #menu-check:checked + label + nav {
+        display: block;
+    }
+
+    .banner h1 {
+        position: relative;
+        z-index: 0;
+    }
+
+    #menu-check:not(:checked) ~ nav {
+        display: none;
+    }
+
+    #menu-check:checked ~ nav {
+        display: block;
+    }
+
+    #menu-check:checked ~ #menu-cerrar {
+        display: inline;
+    }
+
+    #menu {
+        display: block;
+        font-family: sans-serif;
+        color: black;
+        font-size: 25px;
+        width: 34px;
+        height: 70px;
+        backdrop-filter: blur(10px);
+        padding: 10px 0px 0px 10px;
+    }
+
+    #menu:hover {
+        color: grey;
+    }
+
+    #menu-cerrar {
+        display: none;
+    }
+
+    #menu-abrir {
+        padding: 1px 2px 1px 2px;
+        border: 2px solid black;
+        border-radius: 5px;
+        
+    }
+
+    #menu-check:not(:checked) ~ #menu-abrir {
+        display: inline;
+    }
+
+    #menu-check:not(:checked) ~ #menu-cerrar {
+        display: none;
+    }
+
+    #menu-check:checked ~ #menu-abrir {
+        display: none;
+    }
+
+    #menu-check:checked ~ #menu-cerrar {
+        display: inline;
+    }
+
+    
+}

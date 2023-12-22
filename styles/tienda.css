@@ -1,0 +1,19 @@
+table{
+    margin: auto;
+    border-collapse: separate;
+    border-spacing: 30px;
+}
+
+td{
+    padding: 20px;
+    
+}
+
+img{
+    transition: all 0.4s ease;
+    border-radius: 6px;
+}
+img:hover{
+    width: 220px;
+    height: 190px;
+}
