@@ -22,11 +22,14 @@ header img{
     border-radius: 8px;
     cursor: pointer;
 }
-header h1 {
+#titulo {
     flex-grow: 1; 
     text-align: center; 
-    cursor: pointer;
     margin: 0;
+}
+#titulo h1{
+    cursor: pointer;
+    display: inline-block;
 }
 header nav {
     width: 30%;
