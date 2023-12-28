@@ -42,7 +42,7 @@ form label input{
     width: 100%;
     font-size: 18px;
     border-radius: 5px;
-    padding: 0 8px;
+    padding: 2px 8px;
     transition: all 0.8s ease;
 
 }
