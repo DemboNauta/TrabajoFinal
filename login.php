@@ -43,3 +43,9 @@
     </main>
 </body>
 </html>
+
+<?php
+    if(isset($_POST['usuario']) && isset($_POST['contraseña'])){
+      echo "Prueba";  
+    }
+?>

@@ -41,9 +41,9 @@
             <input type="date" name="nacimiento" id="nacimiento"><br>
         
             <label for="contraseña"><p>Contraseña:</p></label>
-            <input type="password" name="contraseña" id="contraseña" placeholder="Contraseña" required><br>
+            <input type="password" name="password" id="password" placeholder="Contraseña" required><br>
         
-            <input type="submit" value="Entrar" id="entrar">
+            <input type="submit" value="Entrar" id="entrar" name="entrar">
         
             <p id="alter">¿Ya tienes cuenta? <a href="login.html">Accede!</a></p>
         </form>
@@ -51,3 +51,35 @@
     </main>
 </body>
 </html>
+
+<?php
+    if(isset($_POST['correo']) && isset($_POST['password']) && isset($_POST['entrar'])){
+
+      $conn=new mysqli("localhost","root","","sneakutopia");
+
+      $email = $conn->real_escape_string($_POST['correo']);
+      $sql = "SELECT EMAIL FROM USERS WHERE EMAIL='$email'";
+      
+      $result = $conn->query($sql);
+
+      if($result->num_rows > 0){
+        echo "<p>El usuario ya existe</p>";
+      } else {
+        $nombre = $conn->real_escape_string($_POST['nombre']);
+        $apellidos = $conn->real_escape_string($_POST['apellidos']);
+        $email = $conn->real_escape_string($_POST['correo']);
+        $fechaNacimiento = $conn->real_escape_string($_POST['nacimiento']);
+        $password = $conn->real_escape_string($_POST['password']);
+        $tipoUsuario = 'user'; 
+
+        // Consulta de INSERT
+        $sql_insert = "INSERT INTO USERS (name, apellidos, email, fechaNacimiento, password, tipoUsuario) VALUES ('$nombre', '$apellidos', '$email', '$fechaNacimiento', '$password', '$tipoUsuario')";
+        if ($conn->query($sql_insert)) {
+            echo "<p>El usuario ya existe</p>";
+        } else {
+            echo "<p>Error: " . $sql_insert . "<br>" . $conn->error;
+        }
+      }
+      $conn->close();
+    }
+?>
