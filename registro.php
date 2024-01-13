@@ -41,7 +41,7 @@
             <input type="date" name="nacimiento" id="nacimiento"><br>
         
             <label for="contraseña"><p>Contraseña:</p></label>
-            <input type="password" name="contraseña" id="contraseña" placeholder="Contraseña" required><br>
+            <input type="password" name="password" id="password" placeholder="Contraseña" required><br>
         
             <input type="submit" value="Entrar" id="entrar">
         
@@ -51,3 +51,30 @@
     </main>
 </body>
 </html>
+
+<?php
+$servername="SneakUtopia";
+    if(isset($_POST['usuario']) && isset($_POST['password'])){
+      $conn=new mysqli("localhost","root","root","sneakutopia");
+      $sql="SELECT EMAIL FROM USERS WHERE EMAIL=".$_POST['email'];
+      $result=$conn->query($select);
+      if($result->num_rows >0){
+        echo "El usuario ya existe";
+        }else{
+            $nombre = $_POST['nombre'];
+            $apellidos = $_POST['apellidos'];
+            $email = $_POST['email'];
+            $fechaNacimiento = $_POST['nacimiento'];
+            $password = $_POST['password'];
+            $tipoUsuario = 'user'; 
+
+            // Consulta de INSERT
+            $sql = "INSERT INTO USERS (name, apellidos, email, fechaNacimiento, password, tipoUsuario) VALUES ('$nombre', '$apellidos', '$email', '$fechaNacimiento', '$password', '$tipoUsuario')";
+            if ($conn->query($sql)) {
+                echo "Nuevo usuario creado correctamente";
+            } else {
+            echo "Error: " . $sql . "<br>" . $conn->error;
+            }
+        }
+    }
+?>
