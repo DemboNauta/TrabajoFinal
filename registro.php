@@ -72,7 +72,6 @@
         $password = $conn->real_escape_string($_POST['password']);
         $tipoUsuario = 'user'; 
 
-        // Consulta de INSERT
         $sql_insert = "INSERT INTO USERS (name, apellidos, email, fechaNacimiento, password, tipoUsuario) VALUES ('$nombre', '$apellidos', '$email', '$fechaNacimiento', '$password', '$tipoUsuario')";
         if ($conn->query($sql_insert)) {
             echo "<p>El usuario ya existe</p>";
