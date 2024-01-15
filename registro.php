@@ -38,7 +38,7 @@
             <input type="email" name="correo" id="correo" required placeholder="Correo electrónico" ><br>
         
             <label for="nacimiento"><p>Fecha de Nacimiento:</p></label>
-            <input type="date" name="nacimiento" id="nacimiento"><br>
+            <input type="date" name="nacimiento" id="nacimiento" required><br>
         
             <label for="contraseña"><p>Contraseña:</p></label>
             <input type="password" name="password" id="password" placeholder="Contraseña" required><br>
